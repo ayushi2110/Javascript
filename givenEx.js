@@ -7,10 +7,6 @@
  */
 const fs = require("fs");
 
-// fs.readFileSync("example.txt");
-
-// console.log("print before fs");
-
 /**
  *
  * In this example we create a promise to show the node js is asynchronuse behaviour
@@ -25,7 +21,10 @@ const fs = require("fs");
 
 console.log("starting");
 
-const fsValue = fs.readFileSync("example.txt").toString("utf8");
+// const fsValue = fs.readFileSync("example.txt").toString("utf8");
+let fsValue = fs.readFile("example.txt", "utf8", (error, data) => {
+  return data;
+});
 
 console.log(fsValue);
 
