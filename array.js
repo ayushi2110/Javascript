@@ -101,3 +101,16 @@ let main = arrVal.filter((item, index, arr) => {
   }
 }, 0);
 console.log(main);
+
+// possibilities of Combination
+let arrCom = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+let val = 110;
+let findCom = [];
+for (i = 0; i < arrCom.length; i++) {
+  for (j = i + 1; j < arrCom.length; j++) {
+    if (arrCom[i] + arrCom[j] == val) {
+      findCom.push([arrCom[i], arrCom[j]]);
+    }
+  }
+}
+console.log(findCom);
