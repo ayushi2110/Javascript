@@ -24,6 +24,12 @@ function countVal(val) {
 
 // console.log(countVal(count));
 
+// [
+//   { user_id: 1, post_count: 3 },
+//   { user_id: 2, post_count: 1 },
+//   { user_id: 3, post_count: 2 }
+// ]
+
 //==================================================
 
 //find the averge of rating
@@ -50,3 +56,22 @@ function avg(item) {
 // console.log(avg(findAvg));
 
 //==================================================
+
+//Remove duplicate Array of Object
+
+let books = [
+  { title: "C++", author: "Bjarne" },
+  { title: "Java", author: "James" },
+  { title: "Python", author: "Guido" },
+  { title: "Java", author: "James" },
+];
+
+let blank = {};
+let arrBlank = [];
+for (book of books) {
+  if (!blank[book.title]) {
+    blank[book.title] = true;
+    arrBlank.push(book);
+  }
+}
+console.log(arrBlank);
