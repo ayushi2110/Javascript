@@ -3,7 +3,6 @@ function numberCount() {
     console.log(value);
   }
   let value = 10;
-
   return checkNum;
 }
 
