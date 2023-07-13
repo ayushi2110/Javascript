@@ -1,3 +1,4 @@
+//Clouser ======
 function numberCount() {
   function checkNum() {
     console.log(value);
