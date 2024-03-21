@@ -1,4 +1,4 @@
-//Find the second larget number by using curryinh
+//Find the second larget number by using currying
 
 const numbers = [23, 14, 2, 6, 89, 45, 62, 34, 8, 3, 94, 76, 42, 90, 1, 63];
 
