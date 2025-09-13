@@ -1,3 +1,6 @@
+// This code demonstrates two ways to print a message with a delay of 1 second, repeated 5 times.
+// Both methods use async/await and Promises to handle the delay before printing the message.
+
 //print value after 5 seconds
 function excuteAfterDelay() {
   return new Promise((resolve) => {
@@ -16,7 +19,7 @@ async function excute() {
 
 excute();
 
-// another way to do this 
+// another way to do this
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
