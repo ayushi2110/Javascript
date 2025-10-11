@@ -41,7 +41,7 @@ function runFiveTimesAfterInterval(message, interval) {
 
 async function runInFiveTimes() {
   for (let i = 1; i <= 5; i++) {
-    await runFiveTimesAfterInterval("Hello", 1000);
+    await runFiveTimesAfterInterval("Run in five run times", 1000);
   }
 }
 
