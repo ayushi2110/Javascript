@@ -25,3 +25,21 @@ console.log(checkPalindrome("edfabbaij"));
 // b = a
 // a = a
 // a = b
+
+// brute force approach
+
+function longestPalindromeBruteForce(str) {
+  let longest = "";
+  for (i = 0; i < str.length; i++) {
+    for (j = i + 1; j <= str.length; j++) {
+      let substring = str.slice(i, j);
+      let reversed = substring.split("").reverse().join("");
+      if (substring === reversed && substring.length > longest.length) {
+        longest = substring;
+      }
+      console.log(longest);
+    }
+  }
+}
+
+longestPalindromeBruteForce("abbaab");
