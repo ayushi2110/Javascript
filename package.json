@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "This repository contains solutions to various coding questions using JavaScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushi2110/Javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ayushi2110/Javascript/issues"
+  },
+  "homepage": "https://github.com/ayushi2110/Javascript#readme"
 }
