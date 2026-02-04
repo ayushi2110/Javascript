@@ -75,3 +75,20 @@ function bfsFatten(tree) {
 }
 
 console.log("BFS Fattened Array:", bfsFatten(tree)); // Output: ["A", "B", "C", "D", "E", "F", "G"]
+
+// other way to fatten the object array using recursion
+function flattenArray(tree, result = []) {
+  if (tree.value) {
+    console.log("Current Value:", tree.value);
+    result.push(tree.value);
+  }
+  if (tree.children && tree.children.length > 0) {
+    for (const child of tree.children) {
+      flattenArray(child, result);
+    }
+  }
+
+  return result.sort();
+}
+
+console.log("Recursion Fattened Array:", flattenArray(tree, (result = []))); // Output: ["A", "B", "D", "E", "C", "F", "G"]
