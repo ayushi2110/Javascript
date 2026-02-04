@@ -52,4 +52,26 @@ function dfsFatten(tree, result = []) {
 
 console.log("DFS Fattened Array:", dfsFatten(tree)); // Output: ["A", "B", "D", "E", "C", "F", "G"]
 
-//commit message eslint fix: corrected indentation and spacing issues in dfsFatten function
+// BFS Fattening
+function bfsFatten(tree) {
+  const result = [];
+  const queue = [tree];
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (current.value) {
+      result.push(current.value);
+    }
+    for (const key in current) {
+      if (key !== "value" && Array.isArray(current[key])) {
+        for (const child of current[key]) {
+          queue.push(child);
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+console.log("BFS Fattened Array:", bfsFatten(tree)); // Output: ["A", "B", "C", "D", "E", "F", "G"]
